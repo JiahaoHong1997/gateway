@@ -18,6 +18,10 @@ type WeightNode struct {
 	effectiveWeight int		// 有效权重
 }
 
+func NewWeightRound() *WeightRound {
+	return &WeightRound{}
+}
+
 func (r *WeightRound) Add(params ...string) error {
 	if len(params) != 2 {
 		return errors.New("param len need 2")
@@ -27,7 +31,7 @@ func (r *WeightRound) Add(params ...string) error {
 	if err != nil {
 		return err
 	}
-	node := &WeightNode{addr:params[0], weight: int(parInt)}
+	node := &WeightNode{addr: params[0], weight: int(parInt)}
 	node.effectiveWeight = node.weight
 	r.rss = append(r.rss, node)
 	return nil

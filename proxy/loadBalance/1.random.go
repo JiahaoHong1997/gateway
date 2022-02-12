@@ -10,6 +10,10 @@ type RandomBalance struct {
 	rss 		[]string
 }
 
+func NewRandomBalance() *RandomBalance {
+	return &RandomBalance{}
+}
+
 func (r *RandomBalance) Next() string {
 	if len(r.rss) == 0 {
 		return ""

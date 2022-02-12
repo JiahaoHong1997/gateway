@@ -7,6 +7,10 @@ type RoundBalance struct {
 	rss      []string
 }
 
+func NewRoundBalance() *RoundBalance {
+	return &RoundBalance{}
+}
+
 func (r *RoundBalance) Add(params ...string) error {
 	if len(params) == 0 {
 		return errors.New("param len 1 at least")

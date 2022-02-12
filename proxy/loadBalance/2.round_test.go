@@ -5,8 +5,8 @@ import (
 	"testing"
 )
 
-func TestRandomBalance(t *testing.T) {
-	rb := &RandomBalance{}
+func TestRoundBalance(t *testing.T) {
+	rb := NewRoundBalance()
 	rb.Add("127.0.0.1:2003")
 	rb.Add("127.0.0.1:2004")
 	rb.Add("127.0.0.1:2005")

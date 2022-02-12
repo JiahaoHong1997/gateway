@@ -6,7 +6,7 @@ import (
 )
 
 func TestLB(t *testing.T) {
-	rb := &WeightRound{}
+	rb := NewWeightRound()
 	rb.Add("127.0.0.1:2003", "4") //0
 	rb.Add("127.0.0.1:2004", "3") //1
 	rb.Add("127.0.0.1:2005", "2") //2
